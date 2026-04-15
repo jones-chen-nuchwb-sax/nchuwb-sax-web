@@ -9,12 +9,12 @@
       "location": "中興大學",
       "description": "這是我們最近一次的團練紀錄...",
       "videos": [
-        { "title": "新天堂樂園", "youtubeId": "QYMgG5..." },
-        { "title": "Sakura Song", "youtubeId": "rEe2n4..." }
+        { "title": "新天堂樂園", "youtubeId": "30XYi2DIF3A" },
+        { "title": "Sakura Song", "youtubeId": "RKrW2PpRvKc" }
       ],
       "images": [
-        "images/workshops/ws06/IMG_7845.JPG",
-        "images/workshops/ws06/IMG_7840.JPG"
+        "images/workshops/ws06/IMG_7845.jpg",
+        "images/workshops/ws06/IMG_7840.jpg"
       ]
     },
     {
@@ -26,7 +26,7 @@
       "location": "中興大學",
       "description": "...",
       "videos": [],
-      "images": ["images/workshops/ws05/IMG_6316.JPG"]
+      "images": ["images/workshops/ws05/IMG_6316.jpg"]
     }
   ],
   "performances": [
@@ -38,7 +38,7 @@
       "date": "2026-02-08",
       "description": "...",
       "videos": [],
-      "images": ["images/performances/2026-concert/IMG_6319.JPG"]
+      "images": ["images/performances/2026-concert/IMG_6319.jpg"]
     }
   ],
   "tree": [
