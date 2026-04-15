@@ -3,14 +3,32 @@ let siteData = {};
 
 // 1. 初始化：網頁載入後立刻執行
 document.addEventListener('DOMContentLoaded', () => {
+    // 原有的資料抓取邏輯
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
             siteData = data;
-            // 【修改】預設一進來顯示「首頁」
             switchCategory('home');
-        })
-        .catch(error => console.error('無法讀取資料庫:', error));
+        });
+
+    // --- [新增] 手機版選單控制 ---
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const sidebar = document.getElementById('sidebar');
+
+    if (menuBtn && sidebar) {
+        menuBtn.addEventListener('click', (e) => {
+            // 阻止事件冒泡 (防止點擊按鈕後立刻觸發下方的點擊空白處關閉邏輯)
+            e.stopPropagation(); 
+            sidebar.classList.toggle('-translate-x-full');
+        });
+
+        // 點擊側邊欄以外的地方自動收起選單 (優化體驗)
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
+    }
 });
 
 // 2. 切換大分類
@@ -18,6 +36,7 @@ function switchCategory(category) {
     const subMenu = document.getElementById('sub-menu');
     const categoryTitle = document.getElementById('category-title');
     const contentArea = document.getElementById('content-area');
+    const sidebar = document.getElementById('sidebar'); // [新增] 抓取側邊欄
     
     const categoryNames = {
         'home': '首頁',
@@ -29,13 +48,13 @@ function switchCategory(category) {
     categoryTitle.innerText = categoryNames[category] || '紀錄內容';
     subMenu.innerHTML = '';
 
-    // --- 【新增】首頁邏輯：隨機抓取內容 ---
     if (category === 'home') {
         renderHome();
+        // [新增] 回首頁時也確保手機版選單收起來
+        if (window.innerWidth < 768) sidebar.classList.add('-translate-x-full');
         return;
     }
 
-    // 原有的分類邏輯
     const items = siteData[category];
     if (!items || items.length === 0) {
         subMenu.innerHTML = '<p class="text-gray-400 text-sm">尚無紀錄</p>';
@@ -51,9 +70,21 @@ function switchCategory(category) {
             document.querySelectorAll('#sub-menu button').forEach(b => b.classList.remove('bg-emerald-700', 'text-white'));
             btn.classList.add('bg-emerald-700', 'text-white');
             renderContent(item);
+
+            // --- [新增] 點擊子項目後，如果是手機版就自動收起選單 ---
+            if (window.innerWidth < 768) {
+                sidebar.classList.add('-translate-x-full');
+            }
         };
         subMenu.appendChild(btn);
-        if (index === 0) btn.click();
+        
+        // 注意：這裡預設點擊第一個時，先不要觸發「收起選單」
+        // 因為切換大分類時，我們通常想讓使用者看到子選單
+        if (index === 0) {
+            document.querySelectorAll('#sub-menu button').forEach(b => b.classList.remove('bg-emerald-700', 'text-white'));
+            btn.classList.add('bg-emerald-700', 'text-white');
+            renderContent(item);
+        }
     });
 }
 

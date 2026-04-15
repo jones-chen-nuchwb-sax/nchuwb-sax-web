@@ -42,7 +42,7 @@
                 <li><a href="#" onclick="switchCategory('tree')" class="hover:text-emerald-400 transition">族譜</a></li>
                 <li><a href="#" onclick="switchCategory('about')" class="hover:text-emerald-400 transition">關於我們</a></li>
             </ul>
-            <div class="md:hidden">
+            <div id="mobile-menu-button" class="md:hidden cursor-pointer p-2 hover:bg-emerald-800 rounded">
                 <i class="fas fa-bars text-2xl"></i>
             </div>
         </div>
@@ -50,7 +50,7 @@
 
     <div class="container mx-auto flex flex-col md:flex-row min-h-screen">
         
-        <aside class="w-full md:w-64 bg-white md:bg-transparent p-4 md:pt-10 border-b md:border-none">
+        <aside id="sidebar" class="fixed md:relative left-0 top-0 h-full md:h-auto w-64 md:w-64 bg-white md:bg-transparent p-4 md:pt-10 border-r md:border-none z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
             <h2 id="category-title" class="text-emerald-800 font-bold mb-4 hidden md:block border-l-4 border-emerald-600 pl-2">歷屆工作坊</h2>
             <nav id="sub-menu" class="flex md:flex-col space-x-4 md:space-x-0 md:space-y-2 overflow-x-auto no-scrollbar whitespace-nowrap">
                 <p class="text-gray-400 text-sm italic">載入中...</p>
