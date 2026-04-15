@@ -31,14 +31,14 @@
   ],
   "performances": [
     {
-      "id": "perf-wedding",
+      "id": "perf-concert",
       "category": "performances",
-      "subMenuTitle": "2026 婚禮演出",
-      "fullTitle": "Jones & 雅晴 婚禮表演紀錄",
-      "date": "2026-03-14",
+      "subMenuTitle": "2026 薩克重奏音樂會",
+      "fullTitle": "SaxStrider表演紀錄",
+      "date": "2026-02-08",
       "description": "...",
       "videos": [],
-      "images": ["images/performances/2026-wedding/IMG_6319.jpg"]
+      "images": ["images/performances/2026-concert/IMG_6319.jpg"]
     }
   ],
   "tree": [
@@ -49,7 +49,7 @@
         "fullTitle": "100 級成員名錄",
         "date": "入學年度：100",
         "location": "中興大學管樂社",
-        "description": "100 級是工作坊的中堅份子，多位成員至今仍活躍於各項活動。",
+        "description": "test1",
         "members": [
           { "name": "許墨筑", "dept": "植病系", "role": "36屆社長 / 聲部長" },
           { "name": "鍾卓晟", "dept": "會計系", "role": "36屆學指" },
@@ -64,7 +64,7 @@
         "fullTitle": "101 至 105 級成員名錄",
         "date": "入學年度：101-105",
         "location": "中興大學",
-        "description": "這幾屆見證了社團的穩定發展與傳承。",
+        "description": "test2。",
         "members": [
           { "name": "童信融", "dept": "行銷系", "role": "38屆社長" },
           { "name": "徐銘儀", "dept": "化學系", "role": "" },
