@@ -13,8 +13,8 @@
         { "title": "Sakura Song", "youtubeId": "rEe2n4..." }
       ],
       "images": [
-        "images/workshops/ws06/IMG_7845.jpg",
-        "images/workshops/ws06/IMG_7840.jpg"
+        "images/workshops/ws06/IMG_7845.JPG",
+        "images/workshops/ws06/IMG_7840.JPG"
       ]
     },
     {
@@ -26,7 +26,7 @@
       "location": "中興大學",
       "description": "...",
       "videos": [],
-      "images": ["images/workshops/ws05/IMG_6316.jpg"]
+      "images": ["images/workshops/ws05/IMG_6316.JPG"]
     }
   ],
   "performances": [
@@ -38,7 +38,7 @@
       "date": "2026-02-08",
       "description": "...",
       "videos": [],
-      "images": ["images/performances/2026-concert/IMG_6319.jpg"]
+      "images": ["images/performances/2026-concert/IMG_6319.JPG"]
     }
   ],
   "tree": [
