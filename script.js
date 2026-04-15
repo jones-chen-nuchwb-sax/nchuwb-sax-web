@@ -101,7 +101,7 @@ function renderHome() {
     contentArea.innerHTML = `
         <div class="fade-in space-y-10">
             <div class="text-center py-10 bg-gradient-to-r from-emerald-600 to-teal-700 rounded-3xl text-white shadow-xl">
-                <h1 class="text-4xl font-black mb-4">歡迎來到薩克斯風紀錄網</h1>
+                <h1 class="text-4xl font-black mb-4">歡迎來到 NCHUWB Saxophone</h1>
                 <p class="text-emerald-100 italic">"每一段旋律，都是我們共同的記憶"</p>
             </div>
 
