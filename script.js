@@ -61,36 +61,40 @@ function switchCategory(category) {
 function renderHome() {
     const contentArea = document.getElementById('content-area');
     
-    // 從工作坊和演出中隨機各抽一個
-    const randomWS = siteData.workshops[Math.floor(Math.random() * siteData.workshops.length)];
-    const randomPerf = siteData.performances[Math.floor(Math.random() * siteData.performances.length)];
+    // 抓取最新的工作坊 (最後一筆)
+    //const latestWS = siteData.workshops[siteData.workshops.length - 1];
+    const latestWS = siteData.workshops[0];
+    // 抓取最新的演出 (最後一筆)
+    const latestPerf = siteData.performances[siteData.performances.length - 1];
 
     contentArea.innerHTML = `
         <div class="fade-in space-y-10">
             <div class="text-center py-10 bg-gradient-to-r from-emerald-600 to-teal-700 rounded-3xl text-white shadow-xl">
-                <h1 class="text-4xl font-black mb-4">歡迎來到 NCHUWB Saxophone</h1>
-                <p class="text-emerald-100 italic">"test 123"</p>
+                <h1 class="text-4xl font-black mb-4">歡迎來到薩克斯風紀錄網</h1>
+                <p class="text-emerald-100 italic">"每一段旋律，都是我們共同的記憶"</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition cursor-pointer" onclick="renderContent(siteData.workshops[${siteData.workshops.indexOf(randomWS)}])">
-                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">時光回顧</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3">${randomWS.fullTitle}</h3>
-                    <p class="text-gray-500 text-sm line-clamp-2">${randomWS.description}</p>
-                    <div class="mt-4 text-emerald-700 font-medium text-sm">點擊查看詳情 →</div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition cursor-pointer" 
+                     onclick="renderContent(siteData.workshops[0])">
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">最新活動</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">${latestWS.fullTitle}</h3>
+                    <p class="text-gray-500 text-sm line-clamp-2">${latestWS.description}</p>
+                    <div class="mt-4 text-emerald-700 font-medium text-sm">查看紀錄內容 →</div>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition cursor-pointer" onclick="renderContent(siteData.performances[${siteData.performances.indexOf(randomPerf)}])">
-                    <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">精彩演出</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3">${randomPerf.fullTitle}</h3>
-                    <p class="text-gray-500 text-sm line-clamp-2">${randomPerf.description}</p>
-                    <div class="mt-4 text-orange-700 font-medium text-sm">點擊查看詳情 →</div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition cursor-pointer" 
+                     onclick="renderContent(siteData.performances[siteData.performances.length - 1])">
+                    <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">近期演出</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">${latestPerf.fullTitle}</h3>
+                    <p class="text-gray-500 text-sm line-clamp-2">${latestPerf.description}</p>
+                    <div class="mt-4 text-orange-700 font-medium text-sm">欣賞影音紀錄 →</div>
                 </div>
             </div>
             
             <div class="bg-emerald-50 p-8 rounded-2xl text-center">
-                <h3 class="font-bold text-emerald-900 mb-2">今天想看什麼？</h3>
-                <p class="text-emerald-700 text-sm mb-6">點擊上方選單瀏覽歷屆精彩內容，或查看我們的薩克家族族譜。</p>
+                <h3 class="font-bold text-emerald-900 mb-2">想了解更多？</h3>
+                <p class="text-emerald-700 text-sm mb-6">點擊上方選單瀏覽完整的工作坊紀錄、演出影像，或查詢我們的家族族譜。</p>
             </div>
         </div>
     `;
