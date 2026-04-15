@@ -1,0 +1,76 @@
+{
+  "workshops": [
+    {
+      "id": "ws-06",
+      "category": "workshops",
+      "subMenuTitle": "第六回 (2026.03)",
+      "fullTitle": "第六回中興薩克研習工作坊",
+      "date": "2026-03-21",
+      "location": "中興大學",
+      "description": "這是我們最近一次的團練紀錄...",
+      "videos": [
+        { "title": "新天堂樂園", "youtubeId": "QYMgG5..." },
+        { "title": "Sakura Song", "youtubeId": "rEe2n4..." }
+      ],
+      "images": [
+        "images/workshops/ws06/IMG_7845.jpg",
+        "images/workshops/ws06/IMG_7840.jpg"
+      ]
+    },
+    {
+      "id": "ws-05",
+      "category": "workshops",
+      "subMenuTitle": "第五回 (2025.11)",
+      "fullTitle": "第五回中興薩克研習工作坊",
+      "date": "2025-11-29",
+      "location": "中興大學",
+      "description": "...",
+      "videos": [],
+      "images": ["images/workshops/ws05/IMG_6316.jpg"]
+    }
+  ],
+  "performances": [
+    {
+      "id": "perf-wedding",
+      "category": "performances",
+      "subMenuTitle": "2026 婚禮演出",
+      "fullTitle": "Jones & 雅晴 婚禮表演紀錄",
+      "date": "2026-03-14",
+      "description": "...",
+      "videos": [],
+      "images": ["images/performances/2026-wedding/IMG_6319.jpg"]
+    }
+  ],
+  "tree": [
+      {
+        "id": "year-100",
+        "category": "tree",
+        "subMenuTitle": "100 級",
+        "fullTitle": "100 級成員名錄",
+        "date": "入學年度：100",
+        "location": "中興大學管樂社",
+        "description": "100 級是工作坊的中堅份子，多位成員至今仍活躍於各項活動。",
+        "members": [
+          { "name": "許墨筑", "dept": "植病系", "role": "36屆社長 / 聲部長" },
+          { "name": "鍾卓晟", "dept": "會計系", "role": "36屆學指" },
+          { "name": "黃柏儒", "dept": "外文系", "role": "36屆譜務" }
+        ],
+        "images": [] 
+      },
+      {
+        "id": "year-101-105",
+        "category": "tree",
+        "subMenuTitle": "101-105 級",
+        "fullTitle": "101 至 105 級成員名錄",
+        "date": "入學年度：101-105",
+        "location": "中興大學",
+        "description": "這幾屆見證了社團的穩定發展與傳承。",
+        "members": [
+          { "name": "童信融", "dept": "行銷系", "role": "38屆社長" },
+          { "name": "徐銘儀", "dept": "化學系", "role": "" },
+          { "name": "陳孝鈞", "dept": "植病系", "role": "39屆活動" }
+        ],
+        "images": []
+      }
+    ]
+}
